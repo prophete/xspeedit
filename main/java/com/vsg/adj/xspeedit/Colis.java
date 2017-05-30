@@ -1,13 +1,13 @@
 package com.vsg.adj.xspeedit;
 
 import java.util.ArrayList;
-import java.util.List;
+import java.util.Collection;
 
 /**
  * Created by adjengue on 30/05/2017.
  */
 public class Colis {
-    private List<Integer> articles;
+    private Collection<Integer> articles;
     private int tailleColis;
 
     public Colis() {
@@ -15,11 +15,11 @@ public class Colis {
         tailleColis = 0;
     }
 
-    public List<Integer> getArticles() {
+    public Collection<Integer> getArticles() {
         return articles;
     }
 
-    public void setArticles(List<Integer> articles) {
+    public void setArticles(Collection<Integer> articles) {
         this.articles = articles;
     }
 
