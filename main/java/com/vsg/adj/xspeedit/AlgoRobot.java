@@ -1,6 +1,7 @@
 package com.vsg.adj.xspeedit;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -59,8 +60,8 @@ public class AlgoRobot {
     * @param articles Liste des articles à emballer
     * @return listColis Liste des colis crées
     */
-    public List<Colis> emballerColis (List<Integer> articles) {
-        List<Colis> listColis = new ArrayList<>();
+    public Collection<Colis> emballerColis (List<Integer> articles) {
+        Collection<Colis> listColis = new ArrayList<>();
         Colis colis = new Colis();
 
         while(articles.size() > 0 || (articles.isEmpty() && !colis.getArticles().isEmpty())) {
@@ -113,7 +114,7 @@ public class AlgoRobot {
     * @param colisList listColis Liste des colis
     * @return
     */
-    public String printColis(List<Colis> colisList) {
+    public String printColis(Collection<Colis> colisList) {
         StringBuilder stringBuilder = new StringBuilder();
 
         if (colisList != null) {
