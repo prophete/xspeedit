@@ -2,12 +2,13 @@ package com.vsg.adj.xspeedit;
 
 import org.junit.Test;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.List;
 
 import static org.junit.Assert.assertTrue;
 
 /**
- * Created by adjengue on 30/05/2017.
+ * Created by adjengue on 30/05/2017
  */
 public class AlgoRobotTest {
     private static final String emptyStr = "";
@@ -50,10 +51,10 @@ public class AlgoRobotTest {
     public void shouldConvertToTabInt() {
 
         Integer[] intArray = {1, 6, 3, 8, 4, 1, 6, 8, 9, 5, 2, 5, 7, 7, 3};
-        List<Integer> expected = Arrays.asList(intArray);
+        Collection<Integer> expected = Arrays.asList(intArray);
 
         AlgoRobot algo = new AlgoRobot();
-        List<Integer> articles = algo.convertToInteger(in);
+        Collection<Integer> articles = algo.convertToInteger(in);
 
         assert articles != null;
         assert articles .equals( expected );
@@ -66,7 +67,7 @@ public class AlgoRobotTest {
 
         List<Integer> articles = algo.convertToInteger(in);
 
-        List<Colis> listColis = algo.emballerColis(articles);
+        Collection<Colis> listColis = algo.emballerColis(articles);
 
         assert articles != null;
         assert listColis != null;
